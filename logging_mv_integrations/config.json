@@ -1,0 +1,28 @@
+{
+	"version": 1,
+	"disable_existing_loggers": "False",
+	"formatters": {
+		"sample": {
+			"class": "pythonjsonlogger.jsonlogger.JsonFormatter.",
+			"format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s "
+		},
+		"json": {
+			"class": "LoggingJsonFormatter",
+			"format": "%(asctime)s %(levelname)s %(name)s %(version)s %(message)s %(extra)s"
+		}
+	},
+	"handlers": {
+		"console": {
+			"class": "logging.StreamHandler",
+
+			"level": "DEBUG",
+			"formatter": "json",
+		}
+	},
+	"loggers": {
+	},
+	"root": {
+		"level": "DEBUG",
+		"handlers": ["console"]
+	}
+}

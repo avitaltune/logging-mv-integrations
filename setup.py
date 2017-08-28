@@ -66,17 +66,21 @@ setup(
     name='logging-mv-integrations',
     version=version,
     description='Python logging package extensions for TUNE mv-integrations.',
-    long_description=readme + '\n\n' + history,
     author='TUNE Inc., TuneLab',
     author_email='jefft@tune.com',
     url='https://github.com/TuneLab/logging-mv-integrations',
-    download_url='https://github.com/TuneLab/logging-mv-integrations/archive/v{0}.tar.gz'.format(version),
-    keywords=["tune", "reporting", "tmc", "api"],
-    license='MIT License',
-    zip_safe=False,
     install_requires=REQUIREMENTS,
     packages=PACKAGES,
-    package_data={'': ['LICENSE']},
-    package_dir={'tune_reporting': 'tune_reporting'},
-    classifiers=CLASSIFIERS
+    package_dir={'logging-mv-integrations': 'logging-mv-integrations'},
+    data_files=['logging_mv_integrations/config.json'],
+    include_package_data=True,
+    license='Apache 2.0',
+    zip_safe=False,
+    classifiers=CLASSIFIERS,
+    long_description="""\
+    Python logging package extensions for TUNE mv-integrations.
+    -----------------------------------------------------------
+
+    Python logging handlers, formatters, and styles used by TUNE mv-integrations.
+    """
 )

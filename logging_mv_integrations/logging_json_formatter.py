@@ -88,11 +88,11 @@ class LoggingJsonFormatter(jsonlogger.JsonFormatter):
 
         return _logger_version
 
-    def __init__(self, logger_name, logger_version, *args, **kwargs):
-        _logger_name = logger_name.split('.')[0]
-        if __name__ not in self.logger_versions:
-            self.add_logger_version(_logger_name, logger_version)
-        super(LoggingJsonFormatter, self).__init__(*args, **kwargs)
+    # def __init__(self, logger_name, logger_version, *args, **kwargs):
+    #     _logger_name = logger_name.split('.')[0]
+    #     if __name__ not in self.logger_versions:
+    #         self.add_logger_version(_logger_name, logger_version)
+    #     super(LoggingJsonFormatter, self).__init__(*args, **kwargs)
 
     def converter(self, timestamp):
         tz = tzlocal.get_localzone()
@@ -141,7 +141,7 @@ class LoggingJsonFormatter(jsonlogger.JsonFormatter):
 
         self.add_fields(log_record, record, message_dict)
         log_record = self.process_log_record(log_record)
-        log_record['version'] = self.get_logger_version(logger_name=log_record['name'])
+        # log_record['version'] = self.get_logger_version(logger_name=log_record['name'])
 
         prefix_log = OrderedDict()
         extra_log = OrderedDict()
