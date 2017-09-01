@@ -8,9 +8,9 @@ class CustomAdapter(logging.LoggerAdapter):
 
     def process(self, msg, kwargs):
         if 'extra' in kwargs:
-            kwargs['extra'].update({"version": self.extra['version']})
+            kwargs['extra'].update({'version': self.extra['version']})
         else:
-            kwargs['extra'] = {"version": self.extra['version']}
+            kwargs['extra'] = {'version': self.extra['version']}
         return msg, kwargs
 
 
