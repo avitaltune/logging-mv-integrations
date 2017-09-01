@@ -16,5 +16,4 @@ __python_required_version__ = (3, 0)
 from .logger_json_lexer import (LoggerJsonLexer)
 from .logging_format import (TuneLoggingFormat)
 from .logging_json_formatter import (LoggingJsonFormatter)
-from .logging_standard_formatter import (LoggingStandardFormatter)
 from .tune_logging import get_logger

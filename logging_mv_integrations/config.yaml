@@ -2,10 +2,10 @@ version: 1
 disable_existing_loggers: false
 formatters:
   simple:
-    format: '%(asctime)s %(levelname)s %(name)s %(version)s %(message)s %(extra)s'
+    format: '%(asctime)s %(levelname)s %(name)s %(version)s %(message)s'
   json:
-    class: LoggingJsonFormatter
-    format: '%(asctime)s %(levelname)s %(name)s %(version)s %(message)s %(extra)s'
+    class: logging_mv_integrations.logging_json_formatter.LoggingJsonFormatter
+    format: '%(asctime)s %(levelname)s %(name)s %(version)s %(message)s'
 handlers:
   console:
     class: logging.StreamHandler

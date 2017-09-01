@@ -72,7 +72,7 @@ setup(
     install_requires=REQUIREMENTS,
     packages=PACKAGES,
     package_dir={'logging-mv-integrations': 'logging-mv-integrations'},
-    data_files=['logging_mv_integrations/config.json'],
+    data_files=['logging_mv_integrations/config.json', 'logging_mv_integrations/config.yaml'],
     include_package_data=True,
     license='Apache 2.0',
     zip_safe=False,
